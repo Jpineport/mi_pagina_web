@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruins of Lordaeron</title>
     <style>
-        
         body {
-            
+
             background-image: url(imagenes/1.12-claros-de-tirisfal.jpg);
             background-size: cover;
             background-position: center;
@@ -17,7 +16,13 @@
             font-family: 'Times New Roman', Times, serif;
             margin: 50;
             padding: 0;
-        }
+
+            ul { list-style: none; }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            }
 
         header {
             background-image: url(imagenes/RoL_backgrond.jpg);
@@ -46,6 +51,7 @@
         header ul li {
             display: inline-block;
             margin-right: 10px;
+            color: #f7f7f7;
         }
 
         section {
@@ -57,13 +63,14 @@
             font-size: 20px;
             color: #f7f7f7;
             text-indent: 40px;
-            
+
+
         }
 
         section img {
             display: block;
             margin-top: 10px;
-            
+
         }
 
         table {
@@ -73,7 +80,8 @@
             border: 1px solid #383838;
         }
 
-        th, td {
+        th,
+        td {
             padding: 11px 9px;
             text-align: left;
             border-bottom: 1px solid #383838;
@@ -100,23 +108,26 @@
             color: #c19a54;
         }
 
-          .yellow {
+        .yellow {
             color: #ffdf00;
             font-weight: bold;
         }
-         .contenedor-reproductor {
-            max-width: 560px; /* Ancho máximo del minireproductor */
+
+        .contenedor-reproductor {
+            max-width: 560px;
+            /* Ancho máximo del minireproductor */
             margin: 50px auto;
             text-align: center;
         }
+
         iframe {
             width: 100%;
             height: 315px;
             border: none;
-            border-radius: 8px; /* Bordes redondeados */
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+            border-radius: 8px;
+            /* Bordes redondeados */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         }
-
     </style>
 </head>
 
@@ -136,15 +147,14 @@
         </div>
     </header>
 
-    <section style="background-image: url(imagenes/entrance.jpg);"
-     id="Section 1">
-        
+    <section style="background-image: url(imagenes/entrance.jpg);" id="Section 1">
+
         <h2>Dungeon Overview</h2>
         <p>
-        Ruinas de Lordaeron, cuya entrada esta justo en la entrada de Undercity,
-        es una de las nuevas mazmorras disponibles para los primeros niveles en WoW Forever,
-        junto con Hall of Thanes en Ironfoge. Basicamente los jugodres deben entrar para acabar con
-        las fuerzas remanentes de la plaga en los claros de Tirisfall.
+            Ruinas de Lordaeron, cuya entrada esta justo en la entrada de Undercity,
+            es una de las nuevas mazmorras disponibles para los primeros niveles en WoW Forever,
+            junto con Hall of Thanes en Ironfoge. Basicamente los jugodres deben entrar para acabar con
+            las fuerzas remanentes de la plaga en los claros de Tirisfall.
         </p>
         <img src="imagenes/location.png" width="200" height="200">
         <p>
@@ -152,8 +162,8 @@
         </p>
     </section>
 
-    <section  id="Section 2">
-        <h2>  Missiones </h2>
+    <section id="Section 2">
+        <h2> Missiones </h2>
         <p>Contenido de la sección 2.</p>
         <table>
             <thead>
@@ -267,29 +277,37 @@
 
     <section id="Section 3">
         <h2> Bosses </h2>
-        <p style= "color: rgb(240, 239, 239); font-size: 20px;">
-
-            
-        </p>
-        <img src="imagenes/sleeping_kirby.jpg" width="200" height="200 ">
+        <div style="font-size: 30px;">
+            <p>
+                Los enemigos en esta mazmorra son en su mayoria no muertos
+                a excepcion de las arañas al sur de la instancia.
+                <br>
+                <p>
+                    Hay un total de 6 nuevos jefes y un rare.
+                </p>
+            </p>
+            <ul>
+                <li><a href="subsections/witherfang.html"> Whitherfang </a></li>
+                <li><a href="subsections/the_baron.html"> The Baron </a></li>
+                <li><a href="subsections/viktor_the_vile.html"> Viktor the Vile</a></li>
+                <li><a href="subsections/the_abandoned.html"> The Abandoned </a></li>
+                <li><a href="subsections/bjork.html"> Bjork </a></li>
+                <li><a href="subsections/rath´mael.html"> Rath´mael </a></li>
+                <li><a> <br> </a></li>
+                <li><a href="#Section 4"> Lordaeron Captain </a></li>
+            </ul>
     </section>
 
-    <section id="Section 4">
+    <section style="color: #f7f7f7;" id="Section 4">
         <h2>Walkthrough</h2>
-
-         <div class="contenedor-reproductor">
-        <iframe 
-            src="https://www.youtube.com/embed/UvXlahg9ywk" 
-            title="Reproductor de YouTube" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-         iframe>
-    </div>
-        
+        <div class="contenedor-reproductor">
+            <iframe 
+                src="https://www.youtube.com/embed/UvXlahg9ywk"
+                title="Reproductor de YouTube"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>  
+        </div>
     </section>
-
-
-    <a href="#Indice">Ir al índice</a>
 
 </body>
 
