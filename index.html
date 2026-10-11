@@ -4,16 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <title>Ruins of Lordaeron</title>
     <style>
+        
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
+            
+            background-image: url(imagenes/1.12-claros-de-tirisfal.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 50;
             padding: 0;
         }
 
         header {
-            background-color: #f2f2f2;
+            background-image: url(imagenes/RoL_backgrond.jpg);
             padding: 20px;
             text-align: center;
         }
@@ -24,6 +31,7 @@
 
         header h1 {
             margin: 10px 0;
+            color: #f7f7f7;
         }
 
         header p {
@@ -41,58 +49,243 @@
         }
 
         section {
-            padding: 20px;
+            background-color: #000f08;
+            margin-top: 100px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px;
+            font-size: 20px;
+            color: #f7f7f7;
+            text-indent: 40px;
+            
         }
 
         section img {
             display: block;
             margin-top: 10px;
+            
         }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #202020;
+            border: 1px solid #383838;
+        }
+
+        th, td {
+            padding: 11px 9px;
+            text-align: left;
+            border-bottom: 1px solid #383838;
+            vertical-align: top;
+            line-height: 1.8;
+        }
+
+        th {
+            background-color: #171717;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .Quest {
+            color: #ffcc00;
+        }
+
+        .Nivel {
+            text-align: center;
+        }
+
+        .Faccion {
+            text-align: center;
+            color: #c19a54;
+        }
+
+          .yellow {
+            color: #ffdf00;
+            font-weight: bold;
+        }
+         .contenedor-reproductor {
+            max-width: 560px; /* Ancho máximo del minireproductor */
+            margin: 50px auto;
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        }
+
     </style>
 </head>
 
 <body>
 
-    <header id="Indice">
+    <header id="Index">
         <img src="imagenes/sleeping_kirby.jpg" width="80" height="80">
-        <h1>Mi Página Web</h1>
-        <p style="color: green; font-size: 20px;">Indice</p>
+        <h1>Ruins of Lordaeron</h1>
         <div>
             <ul>
 
-                <li><a href="#Sección 1">Sección 1</a></li>
-                <li><a href="#Sección 2">Sección 2</a></li>
-                <li><a href="#Sección 3">Sección 3</a></li>
-                <li><a href="#Sección 4">Sección 4</a></li>
+                <li><a href="#Section 1">Sección 1</a></li>
+                <li><a href="#Section 2">Sección 2</a></li>
+                <li><a href="#Section 3">Sección 3</a></li>
+                <li><a href="#Section 4">Sección 4</a></li>
             </ul>
         </div>
     </header>
 
-    <section id="Sección 1">
-        <h2>Sección 1</h2>
-        <p>Contenido de la sección 1.</p>
-        <img src="imagenes/sleeping_kirby.jpg" width="200" height="200">
+    <section style="background-image: url(imagenes/entrance.jpg);"
+     id="Section 1">
+        
+        <h2>Dungeon Overview</h2>
+        <p>
+        Ruinas de Lordaeron, cuya entrada esta justo en la entrada de Undercity,
+        es una de las nuevas mazmorras disponibles para los primeros niveles en WoW Forever,
+        junto con Hall of Thanes en Ironfoge. Basicamente los jugodres deben entrar para acabar con
+        las fuerzas remanentes de la plaga en los claros de Tirisfall.
+        </p>
+        <img src="imagenes/location.png" width="200" height="200">
         <p>
             <a href="https://www.wowhead.com/classic/zone=718/wailing-caverns" target="_blank"> wailing caverns </a>
         </p>
     </section>
 
-    <section id="Sección 2">
-        <h2>Sección 2</h2>
+    <section  id="Section 2">
+        <h2>  Missiones </h2>
         <p>Contenido de la sección 2.</p>
-        <img src="imagenes/sleeping_kirby.jpg" width="200" height="200">
+        <table>
+            <thead>
+                <tr>
+                    <th>Quest</th>
+                    <th>Level</th>
+                    <th>Side</th>
+                    <th>Empieza</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="yellow"> The Wrath of Rath'mael</td>
+                    <td class="level">15</td>
+                    <td class="side">🔴</td>
+                    <td>
+                        <span class="location">Tirisfal Glades</span> -
+                        <span class="yellow">Deathguard Kristof</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="yellow"> A Frightened Request</td>
+                    <td class="level">15</td>
+                    <td class="side">🔴</td>
+                    <td>
+                        <span class="location">Silverpine Forest</span>,
+                        The Sepulcher -
+                        <span class="yellow">Tabitha Heartweaver</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="yellow"> Light's Justice</td>
+                    <td class="level">15</td>
+                    <td class="side">🔴</td>
+                    <td>
+                        <span class="location">Undercity</span>,
+                        The Apothecarium -
+                        <span class="yellow">Morbin Lightbane</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="yellow"> The New Plague</td>
+                    <td class="level">15</td>
+                    <td class="side">🔴</td>
+                    <td>
+                        <span class="location">Undercity</span>,
+                        The Apothecarium -
+                        <span class="yellow">Theodore Griffs</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="yellow"> Unending Torment</td>
+                    <td class="level">16</td>
+                    <td class="side">🔴</td>
+                    <td>
+                        <span class="location">The Ruins of Lordaeron</span>,
+                        King's Alley -
+                        <span class="yellow">The Baron</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="yellow">[Secret quest] Crest of Lordaeron </td>
+                    <td class="level">14</td>
+                    <td class="side">🛡 / 🔴</td>
+                    <td>
+                        <span class="location">The Ruins of Lordaeron</span>,
+                        Multiple Spawn Points
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="yellow"> Abominable Creatures</td>
+                    <td class="level">16</td>
+                    <td class="side">🛡</td>
+                    <td>
+                        <span class="location">The Ruins of Lordaeron</span>,
+                        Dungeon Entrance -
+                        <span class="yellow">Captain Truman</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="yellow"> Bloodied Insignia</td>
+                    <td class="level">16</td>
+                    <td class="side">🛡</td>
+                    <td>
+                        <span class="location">The Ruins of Lordaeron</span>,
+                        Drops from Undead Mobs
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="yellow"> Remember That I Love You</td>
+                    <td class="level">15</td>
+                    <td class="side">🛡</td>
+                    <td>
+                        <span class="location">The Ruins of Lordaeron</span>,
+                        Located by
+                        <span class="yellow">Rath'mael</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
-    <section id="Sección 3">
-        <h2>Sección 3</h2>
-        <p>Contenido de la sección 3.</p>
+    <section id="Section 3">
+        <h2> Bosses </h2>
+        <p style= "color: rgb(240, 239, 239); font-size: 20px;">
+
+            
+        </p>
         <img src="imagenes/sleeping_kirby.jpg" width="200" height="200 ">
     </section>
 
-    <section id="Sección 4">
-        <h2>Sección 4</h2>
-        <p>Contenido de la sección 4.</p>
-        <img src="imagenes/sleeping_kirby.jpg" width="200" height="200 ">
+    <section id="Section 4">
+        <h2>Walkthrough</h2>
+
+         <div class="contenedor-reproductor">
+        <iframe 
+            src="https://youtu.be/UvXlahg9ywk?si=IhOq5-hCgd6kOxhf" 
+            title="Reproductor de YouTube" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+         iframe>
+    </div>
+        
     </section>
 
 
