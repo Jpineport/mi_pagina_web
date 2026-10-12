@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Modal Pequeño</title>
+    <style>
+        /* El fondo oscuro que cubre la pantalla */
+        .modal-fondo {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background: rgba(0, 0, 0, 0.4); /* Fondo sutil */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* Oculto por defecto */
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+
+        /* La imagen pequeña centrada */
+        .modal-fondo img {
+            width: 300px; /* Define el tamaño exacto aquí */
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Muestra el modal al hacer clic */
+        .modal-fondo:target {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Enlace para abrir -->
+    <a href="#popup">Ver imagen pequeña</a>
+
+    <!-- El Modal (Al hacer clic en el fondo negro, se cierra) -->
+    <a href="#" id="popup" class="modal-fondo">
+        <img src="imagenes/baron_location.png" alt="Vista previa">
+    </a>
+
+</body>
+</html>

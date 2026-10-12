@@ -8,7 +8,37 @@
     <style>
         body {
 
-            background-image: url(../imagenes/1.12-claros-de-tirisfal.jpg);
+             /* El fondo oscuro que cubre la pantalla */
+        .modal-fondo {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background: rgba(0, 0, 0, 0.4); /* Fondo sutil */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* Oculto por defecto */
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+
+        /* La imagen pequeña centrada */
+        .modal-fondo img {
+            width: 300px; /* Define el tamaño exacto aquí */
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Muestra el modal al hacer clic */
+        .modal-fondo:target {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+            background-image: url(../imagenes/RoL_hall.jpg);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -28,7 +58,7 @@
         }
 
         header {
-            background-image: url(../imagenes/RoL_backgrond.jpg);
+            background-image: url(../imagenes/RoL.png);
             padding: 20px;
             text-align: center;
         }
@@ -78,36 +108,23 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            background-color: #202020;
-            border: 1px solid #383838;
+            background-color: #000000;
+            border: 1px solid #034129;
         }
 
         th,
         td {
             padding: 11px 9px;
             text-align: left;
-            border-bottom: 1px solid #383838;
+            border-bottom: 1px solid #053520;
             vertical-align: top;
             line-height: 1.8;
         }
 
         th {
-            background-color: #171717;
+            background-color: #033327;
             font-weight: bold;
             white-space: nowrap;
-        }
-
-        .Quest {
-            color: #ffcc00;
-        }
-
-        .Nivel {
-            text-align: center;
-        }
-
-        .Faccion {
-            text-align: center;
-            color: #c19a54;
         }
 
         .yellow {
@@ -144,30 +161,27 @@
 
 <body>
     <header id="Index">
-        <h1>Witherfang</h1>
+        <h1>The Baron</h1>
     </header>
 
     <section>
-        <img src="../imagenes/sleeping_kirby.jpg" width="600" height="600" class="boss-image">
+        <img src="../imagenes/the_baron.png" width="600" height="600" class="boss-image">
         <h2>
             Resumen
         </h2>
         <p>
-            ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-            pppppppppppppppppppppppppppppppppppppppppppppppp
-            pppppppppppppppppppppp<br>ppppppppppppppppppppppppppppppppppppppppppp
-            ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-            pppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-            ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+            Es el segundo jefe al que los jugadores deben enfrentarse tras el encuentro con Whitherfang, o el primero
+            si siguieron el primer camino que baja hacia el sur.
         </p>
-        <img src="../imagenes/sleeping_kirby.jpg" width="200" height="200" class="footer-image">
+        <img src="../imagenes/baron_location.png" width="200" height="200" class="footer-image">
         <p>
-            ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-            pppppppppppppppppppppppppppppppppppppppppppppppp
-            pppppppppppppppppppppp<br>ppppppppppppppppppppppppppppppppppppppppppp
-            ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-            pppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-            ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+            Esta mole inflige mucho daño y cuenta con una sola abilidad <b>(NockAway)</b>,
+            esta habilidad inflige una gran cantidad de daño instantáneo y reduce la amenaza del objetivo,
+            ademas de mandarlo a volar.
+            <br>
+            El tanque puede ser "oneshoteado" al recibir este ataque,
+            para impedir que el jefe lance esta habilidad se pueden usar stuns, los meles deben
+            evitar estar enfrente ya que es capaz de hacer cleave, ademas de provocar mas paradas por parte del boss.
         </p>
 
 
@@ -184,23 +198,29 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class= "blue"> Objeto raro </td>
-                    <td>5%</td>
+                    <td><a class="blue" href="#popup"> Rebanadora de gancho de carne </a></td>
+                    <td>33%</td>
                 </tr>
                 <tr>
-                    <td class="green">objeto verde</td>
-                    <td>25%</td>
+                    <td class="blue"> Resto de piel de abominación </td>
+                    <td>33%</td>
                 </tr>
                 <tr>
-                    <td>gris</td>
-                    <td>70%</td>
+                    <td class="blue"> Huesos de abominación </td>
+                    <td>33%</td>
+                </tr>
+                <tr>
+                    <td>Cabeza abobinable </td>
+                    <td>100%</td>
                 </tr>
             </tbody>
         </table>
         <br>
-        <a href="../index.html">Volver al inicio</a>
+        <a class="yellow" href="../index.html">Volver al inicio</a>
     </section>
-
+     <a href="#" id="popup" class="modal-fondo">
+        <img src="../imagenes/location.png" alt="Vista previa">
+    </a>
 </body>
 
 </html>

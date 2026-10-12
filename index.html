@@ -17,12 +17,15 @@
             margin: 50;
             padding: 0;
 
-            ul { list-style: none; }
+            ul {
+                list-style: none;
+            }
+
             a {
                 text-decoration: none;
                 color: inherit;
             }
-            }
+        }
 
         header {
             background-image: url(imagenes/RoL_backgrond.jpg);
@@ -76,36 +79,49 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            background-color: #202020;
-            border: 1px solid #383838;
+            background-color: #041b14;
+            border: 1px solid #034129;
         }
 
         th,
         td {
             padding: 11px 9px;
             text-align: left;
-            border-bottom: 1px solid #383838;
+            border-bottom: 1px solid #053520;
             vertical-align: top;
             line-height: 1.8;
         }
 
         th {
-            background-color: #171717;
+            background-color: #093125;
             font-weight: bold;
             white-space: nowrap;
         }
 
-        .Quest {
+        .quest {
             color: #ffcc00;
         }
 
-        .Nivel {
+        .nivel {
             text-align: center;
         }
 
-        .Faccion {
+        .faccionH {
             text-align: center;
-            color: #c19a54;
+            color: #a53f3b;
+
+        }
+
+        .faccionA {
+            text-align: center;
+            color: #2886bd;
+
+        }
+
+        .faccionN {
+            text-align: center;
+
+
         }
 
         .yellow {
@@ -113,7 +129,7 @@
             font-weight: bold;
         }
 
-        .contenedor-reproductor {
+        .contenedor-minireproductor {
             max-width: 560px;
             /* Ancho máximo del minireproductor */
             margin: 50px auto;
@@ -149,28 +165,30 @@
 
     <section style="background-image: url(imagenes/entrance.jpg);" id="Section 1">
 
-        <h2>Dungeon Overview</h2>
+        <h2> Vista general </h2>
         <p>
-            Ruinas de Lordaeron, cuya entrada esta justo en la entrada de Undercity,
-            es una de las nuevas mazmorras disponibles para los primeros niveles en WoW Forever,
-            junto con Hall of Thanes en Ironfoge. Basicamente los jugodres deben entrar para acabar con
-            las fuerzas remanentes de la plaga en los claros de Tirisfall.
+            Las Ruinas de Lordaeron, cuya entrada esta justo en la entrada de Entrañas,
+            es una de las nuevas mazmorras disponibles para los primeros niveles en World of Warcraft Forever,
+            junto con Hall of Thanes en Forjaz.
+        </p>
+        <p>
+            En esencia los jugadores deben entrar para acabar con
+            las fuerzas remanentes de la plaga en los claros de Tirisfal.
         </p>
         <img src="imagenes/location.png" width="200" height="200">
         <p>
-            <a href="https://www.wowhead.com/classic/zone=718/wailing-caverns" target="_blank"> wailing caverns </a>
+            <a href="" target="_blank"> Claros de Tirisfall </a>
         </p>
     </section>
 
     <section id="Section 2">
-        <h2> Missiones </h2>
-        <p>Contenido de la sección 2.</p>
+        <h2> Misiones </h2>
         <table>
             <thead>
                 <tr>
                     <th>Quest</th>
-                    <th>Level</th>
-                    <th>Side</th>
+                    <th>Nivel</th>
+                    <th>Facción</th>
                     <th>Empieza</th>
                 </tr>
             </thead>
@@ -178,8 +196,8 @@
             <tbody>
                 <tr>
                     <td class="yellow"> The Wrath of Rath'mael</td>
-                    <td class="level">15</td>
-                    <td class="side">🔴</td>
+                    <td class="nivel">15</td>
+                    <td class="faccionH">H</td>
                     <td>
                         <span class="location">Tirisfal Glades</span> -
                         <span class="yellow">Deathguard Kristof</span>
@@ -188,8 +206,8 @@
 
                 <tr>
                     <td class="yellow"> A Frightened Request</td>
-                    <td class="level">15</td>
-                    <td class="side">🔴</td>
+                    <td class="nivel">15</td>
+                    <td class="faccionH">H</td>
                     <td>
                         <span class="location">Silverpine Forest</span>,
                         The Sepulcher -
@@ -199,8 +217,8 @@
 
                 <tr>
                     <td class="yellow"> Light's Justice</td>
-                    <td class="level">15</td>
-                    <td class="side">🔴</td>
+                    <td class="nivel">15</td>
+                    <td class="faccionH">H</td>
                     <td>
                         <span class="location">Undercity</span>,
                         The Apothecarium -
@@ -210,8 +228,8 @@
 
                 <tr>
                     <td class="yellow"> The New Plague</td>
-                    <td class="level">15</td>
-                    <td class="side">🔴</td>
+                    <td class="nivel">15</td>
+                    <td class="faccionH">H</td>
                     <td>
                         <span class="location">Undercity</span>,
                         The Apothecarium -
@@ -221,19 +239,23 @@
 
                 <tr>
                     <td class="yellow"> Unending Torment</td>
-                    <td class="level">16</td>
-                    <td class="side">🔴</td>
+                    <td class="nivel">16</td>
+                    <td class="faccionH">H</td>
                     <td>
                         <span class="location">The Ruins of Lordaeron</span>,
                         King's Alley -
-                        <span class="yellow">The Baron</span>
+                        <span> <a href="subsections/the_baron.html" class="yellow">The Baron</span>
                     </td>
                 </tr>
 
                 <tr>
                     <td class="yellow">[Secret quest] Crest of Lordaeron </td>
-                    <td class="level">14</td>
-                    <td class="side">🛡 / 🔴</td>
+                    <td class="nivel">14</td>
+                    <td class="faccionN">
+                        <span style="color: #2886bd;">A</span>
+                        <span>/</span>
+                        <span style="color: #a53f3b;">H</span>
+                    </td>
                     <td>
                         <span class="location">The Ruins of Lordaeron</span>,
                         Multiple Spawn Points
@@ -242,8 +264,8 @@
 
                 <tr>
                     <td class="yellow"> Abominable Creatures</td>
-                    <td class="level">16</td>
-                    <td class="side">🛡</td>
+                    <td class="nivel">16</td>
+                    <td class="faccionA">A</td>
                     <td>
                         <span class="location">The Ruins of Lordaeron</span>,
                         Dungeon Entrance -
@@ -253,8 +275,8 @@
 
                 <tr>
                     <td class="yellow"> Bloodied Insignia</td>
-                    <td class="level">16</td>
-                    <td class="side">🛡</td>
+                    <td class="nivel">16</td>
+                    <td class="faccionA">A</td>
                     <td>
                         <span class="location">The Ruins of Lordaeron</span>,
                         Drops from Undead Mobs
@@ -263,12 +285,11 @@
 
                 <tr>
                     <td class="yellow"> Remember That I Love You</td>
-                    <td class="level">15</td>
-                    <td class="side">🛡</td>
+                    <td class="nivel">15</td>
+                    <td class="faccionA">A</td>
                     <td>
-                        <span class="location">The Ruins of Lordaeron</span>,
-                        Located by
-                        <span class="yellow">Rath'mael</span>
+                        <span class="location">The Ruins of Lordaeron, </span>
+                        <span> <a href="subsections/rath´mael.html" class="yellow">Rath'mael</a></span>
                     </td>
                 </tr>
             </tbody>
@@ -276,15 +297,15 @@
     </section>
 
     <section id="Section 3">
-        <h2> Bosses </h2>
+        <h2> Encuentros </h2>
         <div style="font-size: 30px;">
             <p>
                 Los enemigos en esta mazmorra son en su mayoria no muertos
                 a excepcion de las arañas al sur de la instancia.
                 <br>
-                <p>
-                    Hay un total de 6 nuevos jefes y un rare.
-                </p>
+            <p>
+                Hay un total de 6 nuevos jefes y un rare.
+            </p>
             </p>
             <ul>
                 <li><a href="subsections/witherfang.html"> Whitherfang </a></li>
@@ -300,12 +321,10 @@
 
     <section style="color: #f7f7f7;" id="Section 4">
         <h2>Walkthrough</h2>
-        <div class="contenedor-reproductor">
-            <iframe 
-                src="https://www.youtube.com/embed/UvXlahg9ywk"
-                title="Reproductor de YouTube"
+        <div class="contenedor-minireproductor">
+            <iframe src="https://www.youtube.com/embed/UvXlahg9ywk" title="Reproductor de YouTube"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>  
+                allowfullscreen>
         </div>
     </section>
 

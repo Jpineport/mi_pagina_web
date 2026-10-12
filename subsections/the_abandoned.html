@@ -97,24 +97,6 @@
             white-space: nowrap;
         }
 
-        .Quest {
-            color: #ffcc00;
-        }
-
-        .Nivel {
-            text-align: center;
-        }
-
-        .Faccion {
-            text-align: center;
-            color: #c19a54;
-        }
-
-        .yellow {
-            color: #ffdf00;
-            font-weight: bold;
-        }
-
         .boss-image {
             display: block;
             width: 100%;
@@ -130,6 +112,7 @@
             max-width: 300px;
             height: auto;
             margin: 5px 0 20px 5px;
+            border-radius: 50%;
         }
 
         .blue {
@@ -138,6 +121,11 @@
 
         .green {
             color: #1cc546;
+        }
+
+          .yellow {
+            color: #ffdf00;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -148,35 +136,37 @@
     </header>
 
     <section>
-        <img src="../imagenes/the_baron.png" width="600" height="600" class="boss-image">
+        <img src="../imagenes/the_abandoned.png" width="600" height="600" class="boss-image">
         <h2>
-            Resumen
+            Resumen del Encuentro
         </h2>
         <p>
-            Es el segundo jefe al que los jugadores deben enfrentarse tras el encuentro con Whitherfang, o el primero
-            si siguieron el primer camino que baja hacia el sur.
+            El evento aparecera en cuanto entres en la Plaza del Mercado 
+            desde el camino que lleva al cementerio cerca de <a class="yellow" href="viktor_the_vile.html">Viktor the Vile</a>
+            La estatua de esta zona activará 3 oleadas de ghouls antes de que
+            aparezca.
         </p>
-        <img src="../imagenes/baron_location.png" width="200" height="200" class="footer-image">
         <p>
-            Esta mole inflige mucho daño y cuenta con una sola abilidad <b>(NockAway)</b>,
-            esta habilidad inflige una gran cantidad de daño instantáneo y reduce la amenaza del objetivo,
-            ademas de mandarlo a volar.
-            <br>
-            El tanque puede ser "oneshoteado" al recibir este ataque,
-            para impedir que el jefe lance esta habilidad se pueden usar stuns, los meles deben
-            evitar estar enfrente ya que es capaz de hacer cleave, ademas de provocar mas paradas por parte del boss.
+            A veces hay que matar tambien a un guardia esqueletico cercano para aparezca,
+            seguramente se trate de un bug.
+        </p>
+        <img src="../imagenes/the _abandoned_location.png" width="200" height="200" class="footer-image">
+        <p>
+           Además que sus ataques básicos provocan una reduccion de la velocidad de ataque,
+           posee un <b>(Drain Life)</b> que puede ser interrumpido 
+           mediante un aturdimiento, además de una nova de escarcha que te inmoviliza durante 8s.
         </p>
 
 
     </section>
 
     <section>
-        <h2>Loot Table</h2>
+        <h2>Tabla de Botín</h2>
         <table>
             <thead>
                 <tr>
                     <th>Objeto</th>
-                    <th>Probabilidad de drop</th>
+                    <th>Probabilidad de caída</th>
                 </tr>
             </thead>
             <tbody>
