@@ -144,21 +144,63 @@
             /* Bordes redondeados */
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         }
+
+
+
+        /* Esto si lo hizo la ia, mejor no tocar */
+
+        .modal-fondo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.4);
+            /* Fondo sutil */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* Oculto por defecto */
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+
+        /* La imagen pequeña centrada */
+        .modal-fondo img {
+            width: 300px;
+            /* Define el tamaño exacto aquí */
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Muestra el modal al hacer clic */
+        .modal-fondo:target {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
     </style>
 </head>
 
 <body>
 
     <header id="Index">
-        <img src="imagenes/sleeping_kirby.jpg" width="80" height="80">
+        <img src="imagenes/pines.jpg" width="80" height="80">
         <h1>Ruins of Lordaeron</h1>
         <div>
             <ul>
-
-                <li><a href="#Section 1">Sección 1</a></li>
-                <li><a href="#Section 2">Sección 2</a></li>
-                <li><a href="#Section 3">Sección 3</a></li>
-                <li><a href="#Section 4">Sección 4</a></li>
+                <li><a href="subsections/guide.html"> Guía </a></li>
             </ul>
         </div>
     </header>
@@ -269,7 +311,7 @@
                     <td>
                         <span class="location">The Ruins of Lordaeron</span>,
                         Dungeon Entrance -
-                        <span class="yellow">Captain Truman</span>
+                        <span> <a class="yellow" href="#truman"> Captain Truman </a></span>
                     </td>
                 </tr>
 
@@ -314,9 +356,13 @@
                 <li><a href="subsections/the_abandoned.html"> The Abandoned </a></li>
                 <li><a href="subsections/bjork.html"> Bjork </a></li>
                 <li><a href="subsections/rath´mael.html"> Rath´mael </a></li>
-                <li><a> <br> </a></li>
-                <li><a href="#Section 4"> Lordaeron Captain </a></li>
+                <br> 
+                <li> Lordaeron Captain </li>
             </ul>
+             <a href="#" id="truman" class="modal-fondo">
+            <img src="npcs/Truman.png" alt="Vista previa">
+            /* No funciona como deberia */
+        </a>
     </section>
 
     <section style="color: #f7f7f7;" id="Section 4">
@@ -326,7 +372,12 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen>
         </div>
+       
+
     </section>
+
+
+
 
 </body>
 
